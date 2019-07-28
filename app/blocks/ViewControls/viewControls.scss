@@ -1,0 +1,72 @@
+.viewControls{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 920px;
+  margin: 20px auto 40px auto;
+
+  &__item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid rgba(176, 193, 204, 0.3);
+    border-radius: 20px;
+    margin-right: 20px;
+
+  }
+
+  &__selection{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: .4s;
+
+    &::before{
+      width: 12px;
+      display: block;
+      content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNS4wOSAxOC43MyI+PHBhdGggc3R5bGU9ImZpbGw6I2ZmZiIgZD0iTTIwLC44OCw5LjM3LDExLjQ4LDUuMTIsNy4yNEEzLDMsMCwwLDAsLjg4LDExLjQ4bDYuMzcsNi4zNmEzLDMsMCwwLDAsNC4yNCwwaDBMMjQuMjEsNS4xMkEzLDMsMCwxLDAsMjAsLjg4WiIvPjwvc3ZnPg==');
+      transition: .2s;
+    }
+
+    &--green{
+      box-shadow: 0 0 0 12px rgb(61, 194, 63) inset;
+    }
+
+    &--red{
+      box-shadow: 0 0 0 12px rgb(243, 76, 68) inset;
+    }
+
+    &--hideGreen{
+      
+      box-shadow: 0 0 0 2px rgb(61, 194, 63) inset;
+      // border-color: inherit;
+
+      &::before{
+        transform: scale(0);
+      }
+    }
+
+    &--hideRed{
+      
+      box-shadow: 0 0 0 2px rgb(243, 76, 68) inset;
+      // border-color: inherit;
+
+      &::before{
+        transform: scale(0);
+      }
+    }
+
+  }
+
+  &__title{
+    color: #fff;
+  }
+
+}

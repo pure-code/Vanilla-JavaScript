@@ -1,0 +1,20 @@
+include ../../node_modules/bemto.pug/bemto.pug
+- set_bemto_settings({ modifier: '--' })
+
+include ../blocks/bubble/bubble
+include ../blocks/Slider/slider
+include ../blocks/Chart/chart
+include ../blocks/ViewControls/viewControls
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Chart app
+  body
+
+    +chart
+    +slider
+    +viewControls

@@ -1,0 +1,13 @@
+@import '../blocks/helpers/helpers';
+@import '../blocks/Chart/chart';
+@import '../blocks/Slider/slider';
+@import '../blocks/bubble/bubble';
+@import '../blocks/ViewControls/viewControls';
+
+.viewCount{
+  transition: .4s;
+}
+
+text{
+  font-size: 14px;
+}

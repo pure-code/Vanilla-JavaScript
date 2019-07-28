@@ -1,0 +1,46 @@
+.bubble{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #242f3e;
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 10px;
+  display: none;
+
+  &__date{
+    color: #fff;
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__count{
+    margin-bottom: 5px;
+  }
+
+  &__item{
+
+    &--joined{
+      color: rgb(61, 194, 63);
+    }
+
+    &--left{
+      color: rgb(243, 76, 68);
+    }
+
+    &--hide{
+      opacity: 0;
+    }
+
+    &:nth-child(1){
+      margin-right: 20px;
+    }
+
+  }
+
+}

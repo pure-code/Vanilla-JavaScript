@@ -1,0 +1,75 @@
+.chart{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  user-select: none;
+  overflow: hidden;
+
+  &__heading{
+    width: 100%;
+    max-width: 920px;
+    margin: 50px auto 40px auto;
+    font-size: 30px;
+    color: #fff;
+
+    @media (max-width: 768px){
+      font-size: 18px;
+      font-weight: 400;
+      margin: 20px auto 10px auto;
+    }
+
+  }
+  
+  
+  &__pointer{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    bottom: 0;
+    width: 2px;
+    background: #fff2;
+    display: none;
+    z-index: -1;
+  }
+
+  &__svg{
+    margin: 0 auto;
+  }
+
+  &__graphs{
+    
+  }
+
+  &__dot{
+    transform-origin: bottom;
+  }
+
+  &__line{
+    transition: .4s;
+
+    &--hide{
+      opacity: 0;
+    }
+
+    & path{
+      transform-origin: bottom;
+    }
+
+  }
+
+  &__dates{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  &__date{
+    color: rgb(77, 91, 117);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+}
