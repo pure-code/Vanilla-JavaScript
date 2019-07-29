@@ -61,7 +61,7 @@ export default class CreateSVG{
     const property = {
       class: 'chart__svg',
       width: '100%',
-      height: window.innerHeight > 600 ? 500 : window.innerHeight * .5,
+      height: window.innerHeight * .5,
     };
     
     let lineStep = (property.height - 20) / 5;

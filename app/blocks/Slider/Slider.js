@@ -117,6 +117,8 @@ export default class Slider{
 
   resize(e){
 
+    return;
+
     if(e.type === 'touchstart'){
       return;
     }
