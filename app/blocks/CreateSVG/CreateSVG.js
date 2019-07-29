@@ -84,7 +84,7 @@ export default class CreateSVG{
           <text x="0" y="${property.height - 10}" fill="#4d5b75">0</text>
             <path d="M0 ${property.height} L5000 ${property.height}" stroke="#344058" stroke-width="1" />
         </g>
-        <g class="chart__graphs" style="transform: translateX(-${(count - 2) * this.x - this.ctx.offsetWidth}px)">
+        <g class="chart__graphs">
         </g>
     
     `;
@@ -191,6 +191,9 @@ export default class CreateSVG{
       d = [];
 
     }
+
+    let svgWidth = svg.getBoundingClientRect().width;
+    svg.style.transform = `translateX(-${svgWidth - this.ctx.offsetWidth}px)`;
 
     this.isActive = true;
 

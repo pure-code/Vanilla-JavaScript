@@ -23,7 +23,6 @@ export default class View{
     let dates = data[0].columns[0];
     let countY1 = data[0].columns[1];
     let countY2 = data[0].columns[2];
-    this.ctx = document.querySelector('.chart');
     let pointer = document.querySelector('.chart__pointer');
     let bubble = document.querySelector('.bubble');
     let selectionDot = document.querySelectorAll('.selection');
@@ -45,25 +44,17 @@ export default class View{
     let bubbleCount = bubble.querySelectorAll('.bubble__count');
     let mousePos = e.type === 'touchmove' ? e.targetTouches[0].pageX : e.clientX;
     let testMouse = (this.svgPos.right - mousePos) + (this.firstTranslate - curPos - 15);
-    let selection = Math.round((this.linesWidth - testMouse) / this.betweenSize);
+    let selection = Math.ceil((this.linesWidth - testMouse) / this.betweenSize);
     let isMouseOutLeft = mousePos - this.svgPos.left - (bubble.offsetWidth / 2);
     let isMouseOutRight = (mousePos - this.svgPos.left);
+    let selectionPos = ((selection - 1) * this.betweenSize);
     
-    selectionDot[0].style.transform = `translate(${(selection - 1) * this.betweenSize}px, -${(countY1[selection] * this.maxGrafhTop)}px)`;
-    selectionDot[1].style.transform = `translate(${(selection - 1) * this.betweenSize}px, -${(countY2[selection] * this.maxGrafhTop)}px)`;
+    selectionDot[0].style.transform = `translate(${selectionPos}px, -${(countY1[selection] * this.maxGrafhTop)}px)`;
+    selectionDot[1].style.transform = `translate(${selectionPos}px, -${(countY2[selection] * this.maxGrafhTop)}px)`;
     selectionDot[0].style.display = 'block';
     selectionDot[1].style.display = 'block';
-    
-    if(mousePos - this.svgPos.left >= this.svgPos.width - 2){
+    pointer.style.left = selectionPos - curPos - 1 + 'px';
 
-      pointer.style.left = this.svgPos.width - 2 + 'px';
-
-    } else {
-
-      pointer.style.left = mousePos - this.svgPos.left + 'px';
-
-    }
-    
     if(isMouseOutLeft <= 0){
 
       bubble.style.left = 0;

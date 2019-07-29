@@ -16,7 +16,7 @@ export default class Slider{
     this.minScale = this.slider.offsetWidth / svgWidth;
     this.resizeSide = {};
     this.rightMove = this.getRect(this.slider).right - this.getRect(this.pointer).right;
-    this.leftSideCoord = this.getRect(this.slider).left; // при ресайзе окна менять не забыть
+    this.leftSideCoord = this.getRect(this.slider).left;
     this.lastLeftPosition = this.getRect(this.pointer).left - this.getRect(this.slider).left;
     this.currentTranslate = svgWidth - this.wrap.offsetWidth;
     this.currentScale = this.maxScale;
