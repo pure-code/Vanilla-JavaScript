@@ -7,8 +7,10 @@ export default class ViewControls {
   }
 
   changeView(e){
+
     
     let t = e.target;
+    let currentTranslate = +/\d+/.exec(document.querySelector('.chart__graphs').style.transform);
 
     while (t !== document.body){
 
@@ -17,7 +19,7 @@ export default class ViewControls {
         t.querySelector('.viewControls__selection').classList.toggle('viewControls__selection--hideGreen');
         document.querySelector('.bubble__item--joined').classList.toggle('bubble__item--hide');
         this.lines[0].classList.toggle('chart__line--hide');
-        this.view.setValue();
+        this.view.setValue(currentTranslate);
 
         return;
 
@@ -28,7 +30,7 @@ export default class ViewControls {
         t.querySelector('.viewControls__selection').classList.toggle('viewControls__selection--hideRed');
         document.querySelector('.bubble__item--left').classList.toggle('bubble__item--hide');
         this.lines[1].classList.toggle('chart__line--hide');
-        this.view.setValue();
+        this.view.setValue(currentTranslate);
 
         return;
 

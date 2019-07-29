@@ -111,14 +111,11 @@ export default class Slider{
 
     this.pointer.ondragstart = ()=> false;
     
-    this.View.setGraphsHeight();
     this.View.setValue(this.currentTranslate);
 
   }
 
   resize(e){
-
-    return;
 
     if(e.type === 'touchstart'){
       return;
@@ -163,7 +160,7 @@ export default class Slider{
 
     this.changeWidth.ondragstart = ()=> false;
 
-    this.View.setGraphsHeight();
+    this.View.setValue(this.currentTranslate);
 
   }
 
