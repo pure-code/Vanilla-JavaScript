@@ -31,14 +31,15 @@
     position: absolute;
     left: 0;
     top: 100px;
-    bottom: 0;
-    width: 2px;
-    background: #fff2;
+    bottom: 25px;
+    width: 1px;
+    background: #3b4a5a;
     display: none;
-    z-index: -1;
+    z-index: 0;
   }
 
   &__svg{
+    z-index: 10;
     margin: 0 auto;
   }
 
