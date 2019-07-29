@@ -123,6 +123,7 @@ export default class CreateSVG{
     let dates = this.chart.columns[0];
     let wrap = document.createElement('div');
     let svgWidth = document.querySelector('.chart__line').getBoundingClientRect().width;
+    let count = 0;
 
     wrap.className = 'chart__dates';
     wrap.style.width = svgWidth + 'px';
@@ -131,7 +132,7 @@ export default class CreateSVG{
     
     for(let i = 1; i < dates.length; i++){
 
-      if(i % 2){
+      if(i === 1 || count === 3 || i === dates.length - 1){
         let date = document.createElement('span');
         let curDate = new Date(dates[i]);
 
@@ -140,6 +141,8 @@ export default class CreateSVG{
 
         wrap.appendChild(date);
       }
+
+      count = count === 3 ? 0 : count + 1;
 
     }
 
