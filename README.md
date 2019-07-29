@@ -1,6 +1,6 @@
-# Application on development stage
+# Application is under development 
 
-For a portfolio, I was looking for an example for myself and selected a task from a Telegram Contest.
+I was looking for an example for my portfolio and selected a task from a Telegram Contest.
 
 This is a javascript application that shows graphs.
 
