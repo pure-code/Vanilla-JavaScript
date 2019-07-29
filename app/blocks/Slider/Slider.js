@@ -27,7 +27,7 @@ export default class Slider{
     document.addEventListener('mouseup', e => this.dragEnd(e));
     this.slider.addEventListener('touchstart', e=>this.dragStart(e));
     this.slider.addEventListener('touchmove', e=>this.move(e));
-    this.slider.addEventListener('touchmove', e=>this.resize(e));
+    // this.slider.addEventListener('touchmove', e=>this.resize(e));
     this.slider.addEventListener('touchend', e=>this.dragEnd(e));
     window.addEventListener('resize', ()=> this.leftSideCoord = this.getRect(this.slider).left);
 
